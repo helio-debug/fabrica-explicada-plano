@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WW4JRN7');</script>
+<!-- End Google Tag Manager -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plano de Manutenção Pronto · Fábrica Explicada</title>
+<meta name="description" content="Monte o plano de manutenção preventiva, preditiva e corretiva da sua fábrica numa tarde. Planilha pronta por R$ 9,90.">
+<meta property="og:title" content="Plano de Manutenção Pronto · Fábrica Explicada">
+<meta property="og:description" content="Três perguntas por máquina e o plano do ano sai pronto. R$ 9,90.">
+<meta property="og:image" content="img/r-preditiva.png">
+<link rel="icon" href="icone.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --tinta:#1c1f22; --amarelo:#ffd21f; --amarelo-claro:#fff6cc;
+  --ceu:#8fd3f7; --ceu-claro:#ddf4ff; --verde:#7fb060; --verde-claro:#e9f5df;
+  --verde-escuro:#2f9e5a; --azul:#2f6fb0; --vermelho:#e5484d;
+  --cinza-1:#3a4247; --cinza-2:#5a6369; --cinza-3:#6b7479; --linha:#e5e9ec; --borda-leve:#c9d1d6;
+  --mascara: radial-gradient(closest-side,#000 62%,transparent 100%);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--tinta);font-family:Poppins,system-ui,sans-serif;-webkit-font-smoothing:antialiased;font-weight:500}
+a{color:var(--tinta)}
+img{max-width:100%;display:block}
+:focus-visible{outline:3px solid var(--azul);outline-offset:2px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 32px}
+.estreito{max-width:760px;margin:0 auto;padding:0 32px}
+h1,h2,h3{margin:0;font-weight:700}
+h2{font-size:48px;line-height:1.08;letter-spacing:-.75px}
+p{margin:0}
+.texto p{font-size:20px;line-height:1.6;color:var(--cinza-1)}
+.texto p+p{margin-top:18px}
+.texto strong{color:var(--tinta);font-weight:600}
+.hl{background:var(--amarelo);border:4px solid var(--tinta);border-radius:18px;padding:0 14px;display:inline-block;transform:rotate(-1.5deg)}
+.chip{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:16px;border:3px solid var(--tinta);border-radius:999px;padding:7px 16px;background:#fff}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--tinta);color:#fff;text-decoration:none;padding:20px 38px;border-radius:999px;font-weight:600;font-size:21px;box-shadow:0 6px 0 var(--amarelo);transition:transform .12s,box-shadow .12s;text-align:center;min-height:56px}
+.btn:hover{color:#fff;transform:translateY(2px);box-shadow:0 4px 0 var(--amarelo)}
+.btn-amarelo{background:var(--amarelo);color:var(--tinta);border:4px solid var(--tinta);box-shadow:0 6px 0 var(--tinta)}
+.btn-amarelo:hover{color:var(--tinta);box-shadow:0 4px 0 var(--tinta)}
+.micro{font-size:15px;color:var(--cinza-2);font-weight:500}
+.cartao{border:4px solid var(--tinta);border-radius:32px;background:#fff;overflow:hidden}
+section{scroll-margin-top:20px}
+
+/* topo */
+.topo{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 32px;max-width:1120px;margin:0 auto}
+.logo{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:21px;text-decoration:none}
+.topo .chip{background:var(--amarelo);text-decoration:none}
+
+/* hero */
+.hero{text-align:center;padding:36px 32px 0;display:flex;flex-direction:column;align-items:center;gap:24px}
+.hero .pre{background:var(--ceu-claro)}
+.hero h1{font-size:68px;line-height:1.05;letter-spacing:-1.5px;max-width:980px}
+.hero .sub{font-size:22px;line-height:1.5;color:var(--cinza-1);max-width:720px}
+.hero .sub b{color:var(--tinta);font-weight:600}
+.hero .acoes{display:flex;flex-direction:column;align-items:center;gap:14px;margin-top:6px}
+
+/* palco */
+.palco{position:relative;height:520px;background:var(--ceu-claro);border:4px solid var(--tinta);border-radius:40px;overflow:hidden;margin-top:56px}
+.palco svg.morros{position:absolute;inset:0;width:100%;height:100%}
+.palco .cena{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);height:420px;width:auto}
+.tag{position:absolute;border:3px solid var(--tinta);border-radius:14px;padding:9px 16px;font-weight:700;font-size:19px;box-shadow:0 5px 0 var(--tinta);white-space:nowrap}
+.t1{top:52px;left:6%;background:var(--amarelo);transform:rotate(-5deg)}
+.t2{top:150px;left:3%;background:#fff;transform:rotate(3deg)}
+.t3{top:64px;right:5%;background:var(--azul);color:#fff;transform:rotate(4deg)}
+.t4{top:170px;right:3%;background:var(--vermelho);color:#fff;transform:rotate(-4deg)}
+
+/* planilha mockup */
+.planilha{border:4px solid var(--tinta);border-radius:24px;background:#fff;box-shadow:10px 10px 0 var(--tinta);overflow:hidden}
+.planilha .barra{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--tinta);color:#fff;padding:12px 20px;font-weight:600;font-size:15px}
+.planilha .barra span:last-child{background:var(--amarelo);color:var(--tinta);border-radius:999px;padding:3px 12px;font-size:13px}
+.planilha table{width:100%;border-collapse:collapse;font-size:15px}
+.planilha th{text-align:left;font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:.4px;color:var(--cinza-2);padding:12px 14px;border-bottom:3px solid var(--tinta);background:var(--amarelo-claro)}
+.planilha td{padding:12px 14px;border-bottom:2px solid var(--linha);vertical-align:middle}
+.planilha .borrado td{filter:blur(4px);user-select:none}
+.cls{display:inline-flex;width:32px;height:32px;border:3px solid var(--tinta);border-radius:50%;align-items:center;justify-content:center;font-weight:700;font-size:14px}
+.cA{background:var(--vermelho);color:#fff}.cB{background:var(--amarelo)}.cC{background:var(--verde-claro)}
+.tp{display:inline-block;border:2px solid var(--tinta);border-radius:999px;padding:3px 10px;font-weight:600;font-size:13px;white-space:nowrap}
+.tp-pred{background:var(--ceu)}.tp-prev{background:var(--amarelo)}.tp-corr{background:var(--verde-claro)}
+.legenda-mock{margin-top:16px;text-align:center}
+
+/* números */
+.numeros{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.num{border:4px solid var(--tinta);border-radius:28px;padding:26px 24px;display:flex;flex-direction:column;gap:8px}
+.num strong{font-size:54px;line-height:1;letter-spacing:-1px}
+.num span{font-weight:600;font-size:17px;line-height:1.35}
+.num small{font-size:13px;color:var(--cinza-1);font-weight:500;line-height:1.4}
+.n1{background:var(--amarelo)}.n2{background:var(--ceu)}.n3{background:var(--verde)}
+
+/* passos */
+.passos{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.passo{padding:26px 24px;display:flex;flex-direction:column;gap:14px}
+.bola{flex:none;width:52px;height:52px;border-radius:50%;background:var(--amarelo);border:4px solid var(--tinta);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:22px}
+.passo h3{font-size:23px;line-height:1.25}
+.passo p{font-size:16px;line-height:1.5;color:var(--cinza-2)}
+.saidas{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:20px}
+.saida{border:4px solid var(--tinta);border-radius:24px;padding:20px 22px;display:flex;flex-direction:column;gap:6px}
+.saida b{font-size:19px}
+.saida span{font-size:15px;line-height:1.45;color:var(--cinza-1)}
+.s1{background:var(--ceu-claro)}.s2{background:var(--amarelo-claro)}.s3{background:var(--verde-claro)}
+
+/* bullets */
+.bullets{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px}
+.bullets li{display:grid;grid-template-columns:34px 1fr auto;gap:14px;align-items:start;padding:18px 0;border-bottom:2px solid var(--linha);font-size:19px;line-height:1.5}
+.bullets li:last-child{border-bottom:0}
+.check{width:30px;height:30px;border:3px solid var(--tinta);border-radius:8px;background:var(--verde);display:flex;align-items:center;justify-content:center;margin-top:1px}
+.aba{font-size:13px;font-weight:600;color:var(--cinza-2);border:2px solid var(--borda-leve);border-radius:999px;padding:3px 10px;white-space:nowrap;margin-top:3px}
+
+/* bônus */
+.bonus{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.bonus .cartao{display:flex;flex-direction:column}
+.bonus .topo-b{position:relative;height:200px;border-bottom:4px solid var(--tinta);display:flex;align-items:center;justify-content:center;gap:6px;padding:16px}
+.bonus .topo-b img{height:150px;width:auto}
+.bonus .corpo{padding:22px 24px 26px;display:flex;flex-direction:column;gap:10px}
+.bonus .corpo b{font-size:13px;letter-spacing:.6px;text-transform:uppercase;color:var(--cinza-2)}
+.bonus h3{font-size:23px;line-height:1.25}
+.bonus p{font-size:16px;line-height:1.55;color:var(--cinza-1)}
+.folha{width:150px;height:170px;background:#fff;border:4px solid var(--tinta);border-radius:10px;padding:12px;display:flex;flex-direction:column;gap:8px;transform:rotate(-4deg);box-shadow:7px 7px 0 var(--tinta)}
+.folha i{display:block;height:7px;background:var(--borda-leve);border-radius:4px}
+.folha i.t{height:10px;width:70%;background:var(--tinta)}
+.folha i.g{height:34px;background:var(--amarelo);border:2px solid var(--tinta);border-radius:6px}
+
+/* porquê do preço */
+.porque{background:var(--amarelo);border:4px solid var(--tinta);border-radius:36px;padding:44px 48px;box-shadow:0 8px 0 var(--tinta)}
+.porque h2{font-size:40px}
+.porque .texto p{color:var(--tinta)}
+
+/* pra quem */
+.pra{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.pra .cartao{padding:26px 28px}
+.pra h3{font-size:22px;margin-bottom:14px}
+.pra ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
+.pra li{display:grid;grid-template-columns:28px 1fr;gap:10px;font-size:17px;line-height:1.45}
+.pra .nao{background:#fff}.pra .sim{background:var(--verde-claro)}
+.ico{width:26px;height:26px;border:3px solid var(--tinta);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.ico-n{background:var(--vermelho)}.ico-s{background:var(--verde)}
+
+/* prova */
+.prova{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+
+/* oferta */
+.oferta{display:grid;grid-template-columns:1fr 1.05fr;border:4px solid var(--tinta);border-radius:40px;overflow:hidden;box-shadow:0 10px 0 var(--tinta);background:#fff}
+.oferta .vis{background:var(--ceu-claro);border-right:4px solid var(--tinta);position:relative;display:flex;align-items:center;justify-content:center;padding:36px;min-height:420px}
+.oferta .vis img{width:100%;max-width:420px;height:auto;position:relative}
+.oferta .vis svg{position:absolute;inset:0;width:100%;height:100%}
+.oferta .info{padding:40px 40px 36px;display:flex;flex-direction:column;gap:18px}
+.oferta h2{font-size:34px}
+.pilha{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.pilha li{display:grid;grid-template-columns:28px 1fr;gap:10px;font-size:17px;line-height:1.4}
+.preco{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.preco strong{font-size:72px;line-height:1;letter-spacing:-2px}
+.preco span{font-weight:600;font-size:17px;color:var(--cinza-2)}
+.garantia{display:grid;grid-template-columns:54px 1fr;gap:14px;align-items:start;background:var(--verde-claro);border:3px solid var(--tinta);border-radius:20px;padding:16px 18px;font-size:15px;line-height:1.5}
+.selo{width:54px;height:54px;border-radius:50%;background:var(--verde);border:3px solid var(--tinta);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;line-height:1.05;text-align:center}
+
+/* faq */
+.faq{display:flex;flex-direction:column;gap:14px}
+.faq details{border:4px solid var(--tinta);border-radius:22px;background:#fff;overflow:hidden}
+.faq details[open]{background:var(--amarelo-claro)}
+.faq summary{cursor:pointer;list-style:none;padding:20px 24px;font-weight:600;font-size:18px;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";flex:none;width:34px;height:34px;border:3px solid var(--tinta);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;line-height:1;background:#fff}
+.faq details[open] summary::after{content:"−"}
+.faq details p{padding:0 24px 22px;font-size:16px;line-height:1.6;color:var(--cinza-1)}
+
+/* ps */
+.ps p{font-size:20px;line-height:1.6}
+.ps p+p{margin-top:16px}
+
+/* bora */
+.bora{background:var(--amarelo);border-top:4px solid var(--tinta);position:relative;padding:90px 32px 170px;text-align:center;overflow:hidden;margin-top:110px}
+.bora h2{font-size:80px;letter-spacing:-1.5px}
+.bora p{font-size:20px;margin:18px auto 30px;max-width:560px;color:var(--tinta)}
+.bora svg{position:absolute;left:0;right:0;bottom:0;width:100%;height:150px}
+.rodape{background:var(--tinta);color:#c9d1d6;padding:36px 32px 120px;font-size:13px;line-height:1.6}
+.rodape .wrap{display:flex;flex-direction:column;gap:12px;padding:0}
+.rodape .logo{color:#fff}
+.rodape a{color:#fff}
+
+.sec{padding-top:110px}
+.sec-t{display:flex;flex-direction:column;gap:14px;margin-bottom:34px}
+.sec-t .texto{max-width:760px}
+
+/* barra fixa no celular */
+.fixa{display:none}
+
+@media (max-width:860px){
+  .wrap,.estreito{padding:0 18px}
+  .topo{padding:14px 18px}
+  .logo{font-size:17px}
+  .logo svg{width:34px;height:34px}
+  .logo{white-space:nowrap}
+  .topo .chip{font-size:13px;padding:6px 12px;white-space:nowrap}
+  .topo .chip .longo{display:none}
+  .hero{padding:22px 18px 0;gap:18px}
+  .hero h1{font-size:38px;letter-spacing:-.6px}
+  .hl{border-width:3px;border-radius:12px;padding:0 8px}
+  .hero .sub{font-size:18px}
+  .btn{font-size:18px;padding:18px 24px;width:100%}
+  .palco{height:330px;border-radius:28px;margin-top:34px}
+  .palco .cena{height:250px;bottom:18px}
+  .tag{font-size:13px;padding:6px 10px;border-width:3px;box-shadow:0 3px 0 var(--tinta)}
+  .t1{top:16px;left:4%}.t2{top:66px;left:2%}.t3{top:18px;right:3%}.t4{top:70px;right:2%}
+  h2{font-size:32px;letter-spacing:-.4px}
+  .texto p{font-size:18px}
+  .sec{padding-top:72px}
+  .planilha{box-shadow:6px 6px 0 var(--tinta);border-radius:18px}
+  .planilha .tabela{overflow-x:auto}
+  .planilha table{min-width:620px;font-size:14px}
+  .numeros,.passos,.saidas,.bonus,.pra,.prova{grid-template-columns:1fr;gap:14px}
+  .num strong{font-size:44px}
+  .bullets li{grid-template-columns:30px 1fr;font-size:17px}
+  .bullets .aba{grid-column:2;justify-self:start;margin-top:-4px}
+  .porque{padding:28px 22px;border-radius:26px}
+  .porque h2{font-size:28px}
+  .oferta{grid-template-columns:minmax(0,1fr);border-radius:28px}
+  .garantia a{overflow-wrap:anywhere}
+  .oferta .vis{border-right:0;border-bottom:4px solid var(--tinta);min-height:240px;padding:20px}
+  .oferta .info{padding:26px 20px}
+  .oferta h2{font-size:26px}
+  .preco strong{font-size:56px}
+  .faq summary{font-size:16px;padding:16px 18px}
+  .bora{padding:64px 18px 140px;margin-top:72px}
+  .bora h2{font-size:52px}
+  .fixa{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:20;background:#fff;border-top:4px solid var(--tinta);padding:10px 14px calc(10px + env(safe-area-inset-bottom));gap:12px;align-items:center;transform:translateY(110%);transition:transform .2s}
+  .fixa.on{transform:none}
+  .fixa .p{display:flex;flex-direction:column;line-height:1.15}
+  .fixa .p strong{font-size:22px}
+  .fixa .p span{font-size:12px;color:var(--cinza-2)}
+  .fixa .btn{flex:1;font-size:16px;padding:14px 16px;min-height:50px;box-shadow:0 4px 0 var(--amarelo)}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.fixa{transition:none}}
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WW4JRN7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<header class="topo">
+  <a class="logo" href="#topo" aria-label="Fábrica Explicada">
+    <svg aria-hidden="true" width="40" height="40" viewBox="0 0 48 48"><rect x="33" y="6" width="7" height="14" fill="#1C1F22"/><path d="M4 44 V22 L14 14 V22 L24 14 V22 L34 14 V22 L44 14 V44 Z" fill="#FFD21F" stroke="#1C1F22" stroke-width="3.5" stroke-linejoin="round"/><rect x="10" y="30" width="7" height="7" rx="1.5" fill="#1C1F22"/><rect x="21" y="30" width="7" height="7" rx="1.5" fill="#1C1F22"/><rect x="32" y="30" width="7" height="7" rx="1.5" fill="#1C1F22"/></svg>
+    Fábrica Explicada
+  </a>
+  <a class="chip" href="#comprar">R$&nbsp;9,90<span class="longo">&nbsp;· acesso na hora</span></a>
+</header>
+
+<main id="topo">
+
+  <!-- HERO -->
+  <section class="hero">
+    <span class="chip pre">Pra técnico, supervisor e engenheiro de manutenção</span>
+    <h1>Monte o plano de manutenção preventiva, preditiva e corretiva da sua fábrica <span class="hl">numa tarde.</span></h1>
+    <p class="sub">Só <b>11% das peças</b> quebram por idade. O plano feito pelo calendário cuida delas e deixa as outras <b>89%</b> pararem a linha quando bem entenderem. Esta planilha diz o que fazer com cada máquina.</p>
+    <div class="acoes">
+      <a class="btn" data-cta href="#comprar">Quero o plano pronto por R$&nbsp;9,90</a>
+      <span class="micro">Pagamento único · chega no seu e-mail na hora · 7 dias pra pedir o dinheiro de volta</span>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="palco" role="img" aria-label="Linha de produção em 3D com motor, redutor e esteira, e um calendário de manutenção na parede">
+      <svg class="morros" aria-hidden="true" viewBox="0 0 1176 520" preserveAspectRatio="none">
+        <polygon points="0,520 0,380 160,320 330,370 520,300 700,360 880,290 1060,350 1176,320 1176,520" fill="#9CCB7A"/>
+        <polygon points="0,520 0,440 260,405 520,450 780,415 1020,455 1176,430 1176,520" fill="#7FB060"/>
+        <polygon points="70,90 110,70 160,80 175,100 130,112 80,108" fill="#fff"/>
+        <polygon points="900,60 950,42 1010,52 1022,74 970,84 912,80" fill="#fff"/>
+        <polygon points="560,40 590,28 630,34 640,50 604,58 570,56" fill="#fff"/>
+      </svg>
+      <img class="cena" src="img/r-preditiva.png" alt="">
+      <span class="tag t1">Bomba 3 → preditiva</span>
+      <span class="tag t2">Reserva → corretiva</span>
+      <span class="tag t3">Redutor → óleo a cada 3 meses</span>
+      <span class="tag t4">Esteira → 2.000 h</span>
+    </div>
+  </div>
+
+  <!-- TENSÃO -->
+  <section class="sec">
+    <div class="estreito texto">
+      <h2 style="margin-bottom:26px">Toda equipe de manutenção sabe qual máquina vai parar no mês que vem.</h2>
+      <p>Só que isso não está escrito em lugar nenhum. Está na cabeça do técnico mais antigo, naquele barulho que a bomba começou a fazer em setembro, no motor que todo mundo põe a mão pra ver se esquentou.</p>
+      <p>O plano oficial é outro. Quase sempre nasceu copiado do manual do fabricante: troca a cada 2.000 horas, lubrifica toda segunda, inspeciona no primeiro sábado do mês. E falha de dois jeitos que você já viu acontecer.</p>
+      <p><strong>A máquina que segura a linha quebra entre uma preventiva e outra</strong>, porque o rolamento dela não sabe que dia é hoje. E no sábado de parada a equipe troca peça boa de <strong>bomba reserva que nem estava rodando</strong>, porque estava na lista.</p>
+      <p>A culpa é do método. Ninguém ensina a parte que vem antes do calendário: decidir, máquina por máquina, o que acontece quando ela para e se ela avisa antes de parar.</p>
+      <p>Quem fez essa pergunta primeiro foi a aviação.</p>
+    </div>
+  </section>
+
+  <!-- IDEIA DISRUPTIVA + NÚMEROS -->
+  <section class="sec" style="padding-top:60px">
+    <div class="wrap">
+      <div class="estreito texto" style="padding:0;margin-bottom:34px">
+        <p>Nos anos 70, a United Airlines analisou o padrão de falha de cada componente dos aviões. O estudo de Nowlan e Heap, que deu origem ao RCM, mostrou que <strong>só 11% das peças tinham falha ligada à idade</strong>. Pras outras 89%, trocar mais cedo não evitava a quebra, e às vezes até provocava.</p>
+        <p>É por isso que plano feito só de calendário erra tanto. E é por isso que a indústria usa três tipos de manutenção, e não um só.</p>
+      </div>
+      <div class="numeros">
+        <div class="num n1"><strong>11%</strong><span>das peças quebram por idade. A preventiva por calendário só funciona nelas.</span><small>Nowlan e Heap, United Airlines, 1978</small></div>
+        <div class="num n2"><strong>8 a 12%</strong><span>de economia da preditiva bem feita sobre um programa só de preventiva.</span><small>Departamento de Energia dos EUA, O&amp;M Best Practices Guide 3.0</small></div>
+        <div class="num n3"><strong>35 a 45%</strong><span>menos tempo de máquina parada com preditiva, na média das pesquisas industriais.</span><small>Departamento de Energia dos EUA, O&amp;M Best Practices Guide 3.0</small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MECANISMO -->
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-t">
+        <span class="chip" style="align-self:flex-start;background:var(--ceu-claro)">Como a planilha decide</span>
+        <h2>Três perguntas por máquina.<br>O plano do ano sai delas.</h2>
+      </div>
+      <div class="passos">
+        <div class="cartao passo"><span class="bola">1</span><h3>Se ela parar amanhã, o que para junto?</h3><p>A linha inteira, a qualidade, a segurança ou nada. É isso que dá a classe A, B ou C.</p></div>
+        <div class="cartao passo"><span class="bola">2</span><h3>A falha dela dá aviso antes?</h3><p>Vibração, temperatura, ruído, óleo escuro. Se avisa, dá pra medir. Se não avisa, vai pro calendário.</p></div>
+        <div class="cartao passo"><span class="bola">3</span><h3>Quanto custa quando ela quebra?</h3><p>Peça, mão de obra e a hora parada da produção. É o número que decide quanto vale gastar pra prevenir.</p></div>
+      </div>
+      <div class="saidas">
+        <div class="saida s1"><b>Preditiva</b><span>Máquina crítica que avisa antes. A planilha indica a técnica e a frequência da medição.</span></div>
+        <div class="saida s2"><b>Preventiva</b><span>Máquina crítica que se desgasta com o uso, sem dar sinal. A planilha põe o intervalo no calendário.</span></div>
+        <div class="saida s3"><b>Corretiva planejada</b><span>Máquina barata, que não segura nada. Pode quebrar, desde que a peça já esteja no almoxarifado.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUTO (foto da coisa) -->
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-t">
+        <h2>É assim que fica a aba 1.</h2>
+      </div>
+      <div class="planilha" role="img" aria-label="Exemplo da matriz de criticidade preenchida">
+        <div class="barra"><span>Aba 1 · Matriz de criticidade</span><span>exemplo preenchido</span></div>
+        <div class="tabela">
+          <table>
+            <thead><tr><th>Máquina</th><th>Para a linha?</th><th>Avisa antes?</th><th>Classe</th><th>Manutenção</th><th>Quando</th></tr></thead>
+            <tbody>
+              <tr><td>Bomba de alimentação 3</td><td>Sim</td><td>Vibração</td><td><span class="cls cA">A</span></td><td><span class="tp tp-pred">Preditiva</span></td><td>Vibração mensal</td></tr>
+              <tr><td>Compressor 1</td><td>Sim</td><td>Óleo</td><td><span class="cls cA">A</span></td><td><span class="tp tp-pred">Preditiva</span></td><td>Óleo a cada 3 meses</td></tr>
+              <tr><td>Motor da esteira 2</td><td>Sim</td><td>Não</td><td><span class="cls cB">B</span></td><td><span class="tp tp-prev">Preventiva</span></td><td>A cada 2.000 h</td></tr>
+              <tr><td>Bomba reserva 4</td><td>Não</td><td>—</td><td><span class="cls cC">C</span></td><td><span class="tp tp-corr">Corretiva planejada</span></td><td>Selo no estoque</td></tr>
+              <tr class="borrado"><td>Painel elétrico CCM-02</td><td>Sim</td><td>Temperatura</td><td><span class="cls cA">A</span></td><td><span class="tp tp-pred">Preditiva</span></td><td>Termografia</td></tr>
+              <tr class="borrado"><td>Redutor do misturador</td><td>Sim</td><td>Óleo</td><td><span class="cls cB">B</span></td><td><span class="tp tp-pred">Preditiva</span></td><td>Óleo a cada 3 meses</td></tr>
+              <tr class="borrado"><td>Ventilador do vestiário</td><td>Não</td><td>—</td><td><span class="cls cC">C</span></td><td><span class="tp tp-corr">Corretiva planejada</span></td><td>—</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <p class="micro legenda-mock">Você digita a máquina e responde as três perguntas. Classe, tipo e frequência saem sozinhos.</p>
+    </div>
+  </section>
+
+  <!-- BULLETS -->
+  <section class="sec">
+    <div class="estreito">
+      <div class="sec-t">
+        <h2>O que você vai encontrar nas 6 abas</h2>
+      </div>
+      <ul class="bullets">
+        <li><span class="check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1C1F22" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5 11-11"/></svg></span><span>A pergunta que tira a bomba reserva da preventiva e devolve as horas de sábado pra máquina que importa.</span><span class="aba">aba 1</span></li>
+        <li><span class="check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1C1F22" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5 11-11"/></svg></span><span>Por que tentar classificar a fábrica inteira de uma vez é o jeito mais rápido de o plano não sair do papel, e por quantas máquinas começar.</span><span class="aba">aba 1</span></li>
+        <li><span class="check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1C1F22" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5 11-11"/></svg></span><span>Por que a máquina recém-instalada pode quebrar mais que a velha, e onde ela entra no plano.</span><span class="aba">aba 2</span></li>
+        <li><span class="check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1C1F22" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5 11-11"/></svg></span><span>Qual técnica cabe em cada máquina: vibração no motor e na bomba, termografia no painel e no mancal, análise de óleo no redutor e no compressor, ultrassom no vazamento. E quais não precisam de nenhuma.</span><span class="aba">aba 2</span></li>
+        <li><span class="check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1C1F22" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5 11-11"/></svg></span><span>O número de vibração que separa "pode rodar" de "programa a parada" num motor de 15 a 300 kW.</span><span class="aba">aba 3</span></li>
+        <li><span class="check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1C1F22" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5 11-11"/></svg></span><span>O erro de medição que faz a tendência de vibração mentir, e como uma etiqueta no mancal resolve.</span><span class="aba">aba 3</span></li>
+        <li><span class="check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1C1F22" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5 11-11"/></svg></span><span>O calendário do ano, semana a semana, montado a partir dos intervalos, sem dois serviços grandes caindo na mesma parada.</span><span class="aba">aba 4</span></li>
+        <li><span class="check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1C1F22" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5 11-11"/></svg></span><span>A frequência de partida de cada técnica, e o sinal que manda apertar o intervalo.</span><span class="aba">aba 4</span></li>
+        <li><span class="check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1C1F22" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5 11-11"/></svg></span><span>A lista das máquinas que você pode deixar quebrar de propósito, e a peça de cada uma que precisa estar no almoxarifado antes.</span><span class="aba">aba 5</span></li>
+        <li><span class="check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1C1F22" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5 11-11"/></svg></span><span>A ordem de serviço de uma linha só, que o técnico preenche no celular sem voltar pra sala.</span><span class="aba">aba 5</span></li>
+        <li><span class="check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1C1F22" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5 11-11"/></svg></span><span>MTBF, MTTR e disponibilidade calculados sozinhos a partir das ordens de serviço. O relatório do mês sai sem ninguém refazer conta.</span><span class="aba">aba 6</span></li>
+      </ul>
+      <div style="text-align:center;margin-top:34px">
+        <a class="btn" data-cta href="#comprar">Quero as 6 abas por R$&nbsp;9,90</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BÔNUS -->
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-t">
+        <h2>Vão junto, sem custo a mais</h2>
+      </div>
+      <div class="bonus">
+        <div class="cartao">
+          <div class="topo-b" style="background:var(--ceu-claro)">
+            <img src="img/r-caldeira.png" alt="" style="height:130px">
+            <img src="img/r-torre.png" alt="" style="height:150px">
+            <img src="img/r-purgador.png" alt="" style="height:120px">
+          </div>
+          <div class="corpo">
+            <b>Bônus 1</b>
+            <h3>Os 7 checklists de inspeção, 224 itens, já dentro do calendário</h3>
+            <p>Caldeira com os pontos da NR-13, ponte rolante, torre de resfriamento, motor elétrico, estação de efluentes, purgadores e vazamento de ar comprimido. Eles existem soltos na biblioteca grátis. Aqui cada item já cai na semana certa do seu plano.</p>
+          </div>
+        </div>
+        <div class="cartao">
+          <div class="topo-b" style="background:var(--amarelo-claro)">
+            <div class="folha" aria-hidden="true"><i class="t"></i><i style="width:50%"></i><i class="g"></i><i></i><i style="width:80%"></i><i></i></div>
+          </div>
+          <div class="corpo">
+            <b>Bônus 2</b>
+            <h3>A folha que convence o gerente</h3>
+            <p>Uma página pra imprimir e levar na reunião: os números do Departamento de Energia dos EUA sobre preditiva e, do lado, os campos pra você preencher com as paradas da sua própria fábrica. É o pedido de verba pra câmera térmica ou pro medidor de vibração, já escrito.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POR QUE R$&nbsp;9,90 (admissão + razão) -->
+  <section class="sec">
+    <div class="wrap">
+      <div class="porque texto">
+        <h2 style="margin-bottom:22px">Por que só R$&nbsp;9,90?</h2>
+        <p>Porque compra de fábrica passa por cotação, pedido e assinatura do gerente, e o plano de manutenção não pode esperar três semanas de aprovação.</p>
+        <p>A R$&nbsp;9,90 você paga no Pix, do próprio bolso, e chega na segunda-feira com o plano montado. Quem assina depois é o gerente, aprovando o plano que você levou.</p>
+        <p>E vamos combinar: é uma planilha. Não tem aula, não dá certificado e o visual é de planilha mesmo. Abre no Excel, no Google Planilhas ou no celular.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRA QUEM -->
+  <section class="sec">
+    <div class="wrap">
+      <div class="pra">
+        <div class="cartao nao">
+          <h3>Não compre se</h3>
+          <ul>
+            <li><span class="ico ico-n"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></span>sua fábrica já roda um sistema de manutenção com o plano revisado todo ano.</li>
+            <li><span class="ico ico-n"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></span>você procura certificado de NR. A planilha não substitui treinamento obrigatório.</li>
+            <li><span class="ico ico-n"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></span>você quer um software com alarme e aplicativo.</li>
+          </ul>
+        </div>
+        <div class="cartao sim">
+          <h3>É pra você se</h3>
+          <ul>
+            <li><span class="ico ico-s"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#1C1F22" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5 11-11"/></svg></span>o plano da sua fábrica está no papel, numa planilha antiga ou na cabeça de alguém.</li>
+            <li><span class="ico ico-s"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#1C1F22" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5 11-11"/></svg></span>a manutenção vive apagando incêndio e você quer sair do quebra-conserta.</li>
+            <li><span class="ico ico-s"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#1C1F22" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5 11-11"/></svg></span>você vai ter que apresentar o plano pra alguém e quer chegar com número na mão.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROVA -->
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-t">
+        <h2>Do canal que explicou a preditiva em 3D</h2>
+        <div class="texto"><p>O Fábrica Explicada mostra por dentro como funciona cada equipamento da fábrica. A planilha usa a mesma lógica dos vídeos, aplicada à lista de máquinas da sua planta.</p></div>
+      </div>
+      <div class="prova">
+        <div class="num n2"><strong>851 mil</strong><span>visualizações nos 8 primeiros vídeos, em uma semana</span></div>
+        <div class="num n1"><strong>237 mil</strong><span>pessoas assistiram ao vídeo da manutenção preditiva</span></div>
+        <div class="num n3"><strong>3.162</strong><span>comentários pedindo checklist e material de apoio</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFERTA -->
+  <section class="sec" id="comprar">
+    <div class="wrap">
+      <div class="oferta">
+        <div class="vis">
+          <svg aria-hidden="true" viewBox="0 0 500 500" preserveAspectRatio="none"><polygon points="0,500 0,380 140,330 290,375 420,320 500,350 500,500" fill="#9CCB7A"/><polygon points="0,500 0,440 200,410 380,450 500,425 500,500" fill="#7FB060"/></svg>
+          <img src="img/r-preditiva.png" alt="Linha de produção em 3D com calendário de manutenção">
+        </div>
+        <div class="info">
+          <h2>Plano de Manutenção Pronto</h2>
+          <ul class="pilha">
+            <li><span class="ico ico-s"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#1C1F22" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5 11-11"/></svg></span>Planilha de 6 abas: criticidade, técnica, limites, calendário, corretiva planejada e indicadores</li>
+            <li><span class="ico ico-s"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#1C1F22" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5 11-11"/></svg></span>Bônus 1: os 7 checklists, 224 itens, encaixados no calendário</li>
+            <li><span class="ico ico-s"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#1C1F22" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5 11-11"/></svg></span>Bônus 2: a folha que convence o gerente</li>
+          </ul>
+          <div class="preco"><strong>R$&nbsp;9,90</strong><span>pagamento único, Pix ou cartão</span></div>
+          <a class="btn" data-cta href="#comprar">Quero o plano pronto agora</a>
+          <p class="micro">O link de acesso chega no seu e-mail assim que o pagamento é confirmado. No Pix, é na hora.</p>
+          <div class="garantia">
+            <span class="selo">7<br>dias</span>
+            <span><b>Se não servir, o dinheiro volta.</b> Em até 7 dias, manda um e-mail pra <a href="mailto:contato@fabricaexplicada.com.br">contato@fabricaexplicada.com.br</a> com "reembolso" no assunto. A gente devolve, sem pergunta e sem formulário.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="sec">
+    <div class="estreito">
+      <div class="sec-t"><h2>Perguntas</h2></div>
+      <div class="faq">
+        <details><summary>Como eu recebo?</summary><p>Assim que o pagamento é confirmado, o link chega no e-mail que você usou na compra. No Pix a confirmação é na hora. Olha também o spam e a aba Promoções.</p></details>
+        <details><summary>Preciso de algum programa?</summary><p>Não. Abre no Excel, no Google Planilhas (grátis) e no celular. Os checklists vêm em PDF pra imprimir.</p></details>
+        <details><summary>Serve pra fábrica pequena?</summary><p>Serve, e é onde ela mais ajuda: fábrica pequena raramente tem quem monte o plano do zero. A planilha manda começar pelas máquinas que mais param, então dá pra fazer com 10 equipamentos.</p></details>
+        <details><summary>A empresa pode pagar? Sai nota?</summary><p>Pode pagar no cartão da empresa. O comprovante chega no e-mail. [Confirmar se sai nota fiscal e de que forma.]</p></details>
+        <details><summary>Substitui a NR, o manual ou o profissional habilitado?</summary><p>Não. A planilha organiza o plano. As exigências das Normas Regulamentadoras, o manual do fabricante e a avaliação de profissional habilitado continuam valendo.</p></details>
+        <details><summary>E se eu não gostar?</summary><p>Em até 7 dias, manda um e-mail pra contato@fabricaexplicada.com.br com "reembolso" no assunto. O dinheiro volta, sem pergunta.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- P.S. -->
+  <section class="sec">
+    <div class="estreito ps">
+      <p><b>P.S.</b> A próxima parada não planejada da sua fábrica já tem data. Ela só ainda não está no seu calendário.</p>
+      <p><b>P.P.S.</b> Abre a planilha hoje e começa pelas cinco máquinas que mais pararam no último ano. Amanhã de manhã você já sabe qual delas vai pra preditiva.</p>
+      <div style="margin-top:30px"><a class="btn" data-cta href="#comprar">Quero o plano pronto por R$&nbsp;9,90</a></div>
+    </div>
+  </section>
+
+  <!-- BORA -->
+  <section class="bora">
+    <h2>Bora?</h2>
+    <p>Três perguntas por máquina, uma tarde, R$&nbsp;9,90.</p>
+    <a class="btn" data-cta href="#comprar">Montar meu plano agora</a>
+    <svg aria-hidden="true" viewBox="0 0 1440 150" preserveAspectRatio="none"><polygon points="0,150 0,70 200,30 420,80 640,20 860,75 1080,25 1300,70 1440,40 1440,150" fill="#7FB060"/><polygon points="0,150 0,110 300,85 620,120 940,90 1240,118 1440,95 1440,150" fill="#2F9E5A"/></svg>
+  </section>
+</main>
+
+<footer class="rodape">
+  <div class="wrap">
+    <span class="logo">Fábrica Explicada</span>
+    <p>Os materiais são referência e não substituem o manual do fabricante, as Normas Regulamentadoras, o profissional legalmente habilitado nem a avaliação no local. Os resultados dependem da sua planta e da execução da sua equipe, e não são garantidos.</p>
+    <p>Este site não faz parte do Facebook, do Instagram ou da Meta, nem é endossado por eles. Contato: <a href="mailto:contato@fabricaexplicada.com.br">contato@fabricaexplicada.com.br</a> · <a href="https://www.instagram.com/fabricaexplicada/" target="_blank" rel="noopener">@fabricaexplicada</a></p>
+    <p>© 2026 Fábrica Explicada</p>
+  </div>
+</footer>
+
+<div class="fixa" id="fixa" aria-hidden="true">
+  <div class="p"><strong>R$&nbsp;9,90</strong><span>acesso na hora</span></div>
+  <a class="btn" data-cta href="#comprar" tabindex="-1">Quero o plano</a>
+</div>
+
+<script>
+// Troque pelo link do checkout. As UTMs da URL seguem junto.
+var CONFIG = { checkout: "" };
+
+(function () {
+  var qs = location.search || "";
+  var links = document.querySelectorAll("[data-cta]");
+  for (var i = 0; i < links.length; i++) {
+    if (CONFIG.checkout) {
+      links[i].href = CONFIG.checkout + (CONFIG.checkout.indexOf("?") > -1 ? qs.replace("?", "&") : qs);
+    }
+    links[i].addEventListener("click", function () {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: "inicio_checkout", produto: "plano-manutencao-pronto", valor: 9.9 });
+    });
+  }
+
+  // barra fixa no celular: aparece depois do hero e some na seção de compra
+  var fixa = document.getElementById("fixa");
+  var hero = document.querySelector(".hero .acoes");
+  var compra = document.getElementById("comprar");
+  if ("IntersectionObserver" in window && fixa && hero && compra) {
+    var heroVisivel = true, compraVisivel = false;
+    var atualiza = function () { fixa.classList.toggle("on", !heroVisivel && !compraVisivel); };
+    new IntersectionObserver(function (e) { heroVisivel = e[0].isIntersecting; atualiza(); }).observe(hero);
+    new IntersectionObserver(function (e) { compraVisivel = e[0].isIntersecting; atualiza(); }).observe(compra);
+  }
+})();
+</script>
+</body>
+</html>
